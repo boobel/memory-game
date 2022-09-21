@@ -1,0 +1,28 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5%;
+    row-gap: 30%;
+    justify-items: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.card {
+    color: black;
+    border: solid 5px black;
+    padding: 15%;
+    transition-duration: 0.5s;
+    width: fit-content;
+    text-align: center;
+
+}
+
+.card:hover {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+.card:active {
+    
+}
