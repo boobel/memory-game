@@ -2,7 +2,7 @@ import React from "react";
 import Score from "./Score";
 import "../styles/Header.css";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div className="header">
       <div className="info">
@@ -12,7 +12,7 @@ const Header = () => {
           before
         </p>
       </div>
-      <Score />
+      <Score score={props.score} bestScore={props.bestScore} />
     </div>
   );
 };

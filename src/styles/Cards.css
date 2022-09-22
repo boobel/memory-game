@@ -5,16 +5,23 @@
     row-gap: 30%;
     justify-items: center;
     align-items: center;
-    margin-top: 5%;
+    margin-top: 2.3%;
 }
 
 .card {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
     color: black;
     border: solid 5px black;
     padding: 15%;
     transition-duration: 0.5s;
     width: fit-content;
     text-align: center;
+    background-color: white;
+    height: 200px;
+    width: 200px;
 
 }
 
@@ -24,5 +31,10 @@
 }
 
 .card:active {
-    
+    transform: translateY(5px);
+    transition-duration: 0.3s;
+}
+
+img {
+    height: 100px;
 }

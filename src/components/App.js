@@ -23,12 +23,17 @@ const App = () => {
 
   const handleGameRestart = () => {
     setScore(0);
-    setbestScore(0);
     addCard([]);
   };
 
   const handleGameLogic = (card) => {
-    if (!cardsArr.includes()) {
+    console.log(cardsArr);
+    console.log(bestScore);
+    if (score >= 6) {
+      alert("You win!");
+      handleGameRestart();
+    }
+    if (!cardsArr.includes(card)) {
       handleCard(card);
       handleScore();
     } else {
@@ -39,8 +44,16 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header />
-      <CardContainer score={score} handleGameLogic={handleGameLogic} />
+      <script
+        src="https://kit.fontawesome.com/c77c3bbfc6.js"
+        crossOrigin="anonymous"
+      ></script>
+      <Header score={score} bestScore={bestScore} />
+      <CardContainer
+        score={score}
+        bestScore={bestScore}
+        handleGameLogic={handleGameLogic}
+      />
       <Footer />
     </div>
   );
